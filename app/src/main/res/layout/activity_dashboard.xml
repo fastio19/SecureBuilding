@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Dashboard">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#fece2f"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/man">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bungee"
+
+            android:layout_toRightOf="@+id/profile_image"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/phone_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/full_name"
+            android:includeFontPadding="false"
+            android:layout_toRightOf="@+id/profile_image"
+            android:layout_marginLeft="10dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/flat"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/custom_button"
+        android:text="ADD FLAT/VILLA"
+        android:gravity="center"
+        android:elevation="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/workplace"
+        android:layout_width="250dp"
+        android:gravity="center"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/custom_button"
+        android:elevation="10dp"
+        android:text="ADD WORKPLACE"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:text="Is your community using secureBuilding? No,request a callback for more information."
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
+        android:textSize="15sp" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/custom_button"
+        android:text="REQUEST A CALLBACK"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

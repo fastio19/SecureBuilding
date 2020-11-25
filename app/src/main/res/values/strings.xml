@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SDL</string>
+    <string-array name="city_names">
+        <item>Akola</item>
+        <item>Pune</item>
+        <item>Nagpur</item>
+        <item>Yavatmal</item>
+        <item>Amravati</item>
+        <item>Mumbai</item>
+        <item>Bangalore</item>
+        <item>Nashikh</item>
+    </string-array>
+</resources>
