@@ -14,7 +14,7 @@
         android:padding="20dp">
 
         <ImageView
-            android:id="@+id/profile_image"
+            android:id="@+id/Dashboard_WatchmenImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerVertical="true"
@@ -23,42 +23,23 @@
         </ImageView>
 
         <TextView
-            android:id="@+id/full_name"
+            android:id="@+id/Dashboard_WatchmenName"
+            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
-            android:layout_toRightOf="@+id/profile_image"
+            android:layout_toRightOf="@+id/Dashboard_WatchmenImage"
             android:fontFamily="@font/bungee"
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/building_name"
+            android:id="@+id/Dashboard_WatchmenBuildingName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/full_name"
+            android:layout_below="@+id/Dashboard_WatchmenName"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/profile_image"
-            android:includeFontPadding="false"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/flat_no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/building_name"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/profile_image"
-            android:includeFontPadding="false"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/phone_no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/flat_no"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/profile_image"
+            android:layout_toRightOf="@+id/Dashboard_WatchmenImage"
             android:includeFontPadding="false"
             android:textSize="14sp" />
     </RelativeLayout>
@@ -68,7 +49,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <androidx.cardview.widget.CardView
-            android:id="@+id/Residents"
+            android:id="@+id/ParkingProblem"
             android:layout_width="160dp"
             android:layout_height="130dp"
             android:layout_weight="1"
@@ -83,7 +64,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Residents"
+                    android:text="Parking Problem"
                     android:layout_centerHorizontal="true"
                     android:textSize="18dp"
                     android:textStyle="bold" />
@@ -93,12 +74,12 @@
                     android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/residents"/>
+                    android:src="@drawable/parked_car"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/NoticeBoard"
+            android:id="@+id/guest_approval"
             android:layout_width="160dp"
             android:layout_height="130dp"
             android:layout_marginLeft="18dp"
@@ -114,7 +95,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Notice Board"
+                    android:text="Guest Approval"
                     android:layout_centerHorizontal="true"
                     android:textSize="18dp"
                     android:textStyle="bold" />

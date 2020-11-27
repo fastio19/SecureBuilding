@@ -2,5 +2,8 @@
 <resources>
     <color name="colorPrimary">#fece2f</color>
     <color name="colorPrimaryDark">#000</color>
+    <color name="colorTrendingEnd">#96C93D</color>
+    <color name="colorTrendingStart">#00B09B</color>
+    <color name="colorDivider">#D6D6D6</color>
     <color name="colorAccent">#03DAC5</color>
 </resources>

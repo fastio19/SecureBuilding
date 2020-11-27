@@ -1,17 +1,52 @@
 package com.example.sdl;
 
 public class UserHelperClass {
-    String name,username,email,phoneNo,password;
-
+    String name;
+    String username;
+    String email;
+    String phoneNo;
+    String password;
+    String buildingName;
+    String flatNo;
+    String vehicleNo;
     public UserHelperClass(){
     }
-
-    public UserHelperClass(String name, String username, String email, String phoneNo, String password) {
+    public UserHelperClass(String name){
+        this.name=name;
+    }
+    public UserHelperClass(String name, String username, String email, String phoneNo, String password,
+                           String buildingName,String flatNo,String vehicleNo) {
         this.name = name;
         this.username = username;
         this.email = email;
         this.phoneNo = phoneNo;
         this.password = password;
+        this.buildingName=buildingName;
+        this.flatNo=flatNo;
+        this.vehicleNo=vehicleNo;
+    }
+    public String getFlatNo() {
+        return flatNo;
+    }
+
+    public void setFlatNo(String flatNo) {
+        this.flatNo = flatNo;
+    }
+
+    public String getVehicleNo() {
+        return vehicleNo;
+    }
+
+    public void setVehicleNo(String vehicleNo) {
+        this.vehicleNo = vehicleNo;
+    }
+
+    public String getBuildingName() {
+        return buildingName;
+    }
+
+    public void setBuildingName(String buildingName) {
+        this.buildingName = buildingName;
     }
 
     public String getName() {

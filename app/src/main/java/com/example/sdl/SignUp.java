@@ -57,28 +57,29 @@ public class SignUp extends AppCompatActivity {
                 if(!validateEmail() | !validateName() | !validatePassword() | !validatePhoneNo() | !validateUsername()){
                     return;
                 }
-                String name=regName.getEditText().getText().toString();
-                String username=regUsername.getEditText().getText().toString();
-                String email=regEmail.getEditText().getText().toString();
-                String phoneNo=regPhoneNo.getEditText().getText().toString();
-                String password=regPassword.getEditText().getText().toString();
+                final String name=regName.getEditText().getText().toString();
+                final String username=regUsername.getEditText().getText().toString();
+                final String email=regEmail.getEditText().getText().toString();
+                final String phoneNo=regPhoneNo.getEditText().getText().toString();
+                final String password=regPassword.getEditText().getText().toString();
                 mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(getApplicationContext(),"Registration Successsful !",Toast.LENGTH_LONG).show();
+                            Intent intent=new Intent(getApplicationContext(),AdditionDetails.class);
+                            intent.putExtra("name", name);
+                            intent.putExtra("username", username);
+                            intent.putExtra("password", password);
+                            intent.putExtra("phoneNo", phoneNo);
+                            intent.putExtra("email", email);
+                            startActivity(intent);
+                            finish();
                         }
                         else{
                             Toast.makeText(getApplicationContext(), "Registration failed!!" + " Please try again later", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
-                UserHelperClass helperClass=new UserHelperClass(name,username,email,phoneNo,password);
-                reference.child(username).setValue(helperClass);
-
-                Intent intent=new Intent(getApplicationContext(),Dashboard.class);
-                startActivity(intent);
-                finish();
             }
         });
     }
@@ -97,17 +98,8 @@ public class SignUp extends AppCompatActivity {
     }
     private Boolean validateUsername(){
         String val=regUsername.getEditText().getText().toString();
-        String noWhiteSpace="^[A-Za-z]\\w{5,29}$";
         if(val.isEmpty()){
             regUsername.setError("Field cannot be empty");
-            return false;
-        }
-        else if(val.length()>=15){
-            regUsername.setError("Username too long");
-            return false;
-        }
-        else if(!val.matches(noWhiteSpace)){
-            regUsername.setError("White Space are not allowed");
             return false;
         }
         else{
@@ -138,16 +130,8 @@ public class SignUp extends AppCompatActivity {
     }
     private Boolean validatePassword(){
         String val=regPassword.getEditText().getText().toString();
-        String passwordVal = "^(?=.*[0-9])"
-                + "(?=.*[a-z])(?=.*[A-Z])"
-                + "(?=.*[@#$%^&+=])"
-                + "(?=\\S+$).{8,20}$";
         if(val.isEmpty()){
             regPassword.setError("Field cannot be empty");
-            return false;
-        }
-        else if(!val.matches(passwordVal)){
-            regPassword.setError("Password is too weak");
             return false;
         }
         else{

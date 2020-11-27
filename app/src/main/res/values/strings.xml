@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SDL</string>
     <string-array name="city_names">
+        <item>City</item>
         <item>Akola</item>
         <item>Pune</item>
         <item>Nagpur</item>
@@ -9,5 +10,16 @@
         <item>Mumbai</item>
         <item>Bangalore</item>
         <item>Nashikh</item>
+    </string-array>
+    <string-array name="society_names">
+        <item>Society</item>
+        <item>Gokuldham</item>
+        <item>SurajDeep</item>
+        <item>Geetai</item>
+        <item>ShriKrishna</item>
+        <item>ParkView</item>
+        <item>Siddhivinayak</item>
+        <item>RisingSun</item>
+        <item>Welcome</item>
     </string-array>
 </resources>

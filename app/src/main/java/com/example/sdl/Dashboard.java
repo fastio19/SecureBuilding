@@ -2,6 +2,7 @@ package com.example.sdl;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -16,24 +17,41 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class Dashboard extends AppCompatActivity {
-    TextView t1,t2;
-    Button b1;
+public class Dashboard extends AppCompatActivity implements View.OnClickListener{
+    TextView t1,t2,t3,t4;
+    private CardView residents,noticeBoard;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         t1=findViewById(R.id.full_name);
-        t2=findViewById(R.id.phone_no);
-        b1=findViewById(R.id.flat);
-        Intent intent=getIntent();
+        t2=findViewById(R.id.building_name);
+        t3=findViewById(R.id.flat_no);
+        t4=findViewById(R.id.phone_no);
+        final Intent intent=getIntent();
         String Name=intent.getStringExtra("name");
-        String PhoneNo=intent.getStringExtra("phoneNo");
+        String BuildingName=intent.getStringExtra("building_name");
+        String FlatNo=intent.getStringExtra("flat_no");
+        String PhoneNo=intent.getStringExtra("phone_no");
         PhoneNo="+91 "+PhoneNo;
+        FlatNo="Flat "+FlatNo;
         t1.setText(Name);
-        t2.setText(PhoneNo);
-
-
+        t2.setText(BuildingName);
+        t3.setText(FlatNo);
+        t4.setText(PhoneNo);
+        residents=(CardView)findViewById(R.id.Residents);
+        noticeBoard=(CardView)findViewById(R.id.NoticeBoard);
+        residents.setOnClickListener(this);
+        noticeBoard.setOnClickListener(this);
     }
 
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()){
+            case R.id.Residents:intent=new Intent(this,Residents.class);startActivity(intent);break;
+            case R.id.NoticeBoard:intent=new Intent(this,NoticeBoard.class);startActivity(intent);break;
+            default:break;
+        }
+    }
 }

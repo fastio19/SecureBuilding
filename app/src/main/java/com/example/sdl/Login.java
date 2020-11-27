@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.core.Tag;
 
 public class Login extends AppCompatActivity {
-    Button callSignUp, login_Btn, forgetPassword;
+    Button callSignUp, login_Btn, forgetPassword,watchmenLogin_Btn;
     TextInputLayout email, password;
     private FirebaseAuth mAuth;
 
@@ -40,6 +40,7 @@ public class Login extends AppCompatActivity {
         email = (TextInputLayout) findViewById(R.id.login_email);
         password = (TextInputLayout) findViewById(R.id.login_password);
         forgetPassword = findViewById(R.id.ForgetPassword);
+        watchmenLogin_Btn=findViewById(R.id.WatchmenLoginBtn);
         mAuth = FirebaseAuth.getInstance();
         forgetPassword.setOnClickListener(new View.OnClickListener(){
                 @Override
@@ -66,6 +67,14 @@ public class Login extends AppCompatActivity {
                     return;
                 else
                     isUser();
+            }
+        });
+        watchmenLogin_Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Login.this,WatchmenLogin.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
@@ -114,22 +123,30 @@ public class Login extends AppCompatActivity {
                                     String temp_password = ds.child("password").getValue(String.class);
                                     String temp_username = ds.child("username").getValue(String.class);
                                     String temp_phoneNo = ds.child("phoneNo").getValue(String.class);
+                                    String temp_buildingName=ds.child("buildingName").getValue(String.class);
+                                    String temp_flatNo=ds.child("flatNo").getValue(String.class);
+                                    String temp_vehicleNo=ds.child("vehicleNo").getValue(String.class);
                                     Log.i("Our Info", temp_username);
                                     Log.i("Our Info", temp_password);
                                     Log.i("Our Info", temp_phoneNo);
                                     Log.i("Our Info", temp_name);
                                     Log.i("Our Info", temp_email);
+                                    Log.i("Our Info", temp_buildingName);
+                                    Log.i("Our Info", temp_flatNo);
+                                    Log.i("Our Info", temp_vehicleNo);
                                     Toast.makeText(getApplicationContext(), "Login successful !!", Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(Login.this, Dashboard.class);
                                     intent.putExtra("name", temp_name);
                                     intent.putExtra("username", temp_username);
                                     intent.putExtra("password", temp_password);
-                                    intent.putExtra("phoneNo", temp_phoneNo);
+                                    intent.putExtra("phone_no", temp_phoneNo);
                                     intent.putExtra("email", temp_email);
+                                    intent.putExtra("building_name",temp_buildingName);
+                                    intent.putExtra("flat_no",temp_flatNo);
+                                    intent.putExtra("vehicle_no",temp_vehicleNo);
                                     startActivity(intent);
                                 }
                             }
-
                         }
 
                         @Override
