@@ -63,7 +63,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                     intent.putExtra("owner",owner);
                     intent.putExtra("flatno",Flatno);
                     context.startActivity(intent);
-
                 }
             });
         }

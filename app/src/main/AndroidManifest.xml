@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SendRequest"></activity>
+        <activity android:name=".AcceptGuest"></activity>
+        <activity android:name=".SendRequest" />
         <activity android:name=".GuestApproval" />
         <activity android:name=".NoticeBoard" />
         <activity android:name=".Residents" />

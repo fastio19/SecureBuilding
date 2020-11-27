@@ -3,6 +3,9 @@ package com.example.sdl;
 public class RequestHelperClass {
     String owner,guest,status;
 
+    public RequestHelperClass(){
+
+    }
     public RequestHelperClass(String owner, String guest,String status) {
         this.owner = owner;
         this.guest = guest;

@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener{
     TextView t1,t2,t3,t4;
-    private CardView residents,noticeBoard;
+    private CardView residents,noticeBoard,acceptGuest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,16 +41,24 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         t4.setText(PhoneNo);
         residents=(CardView)findViewById(R.id.Residents);
         noticeBoard=(CardView)findViewById(R.id.NoticeBoard);
+        acceptGuest=(CardView)findViewById(R.id.accept_guest);
         residents.setOnClickListener(this);
         noticeBoard.setOnClickListener(this);
+        acceptGuest.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         Intent intent;
+        String name=t1.getText().toString();
+        String buildingName=t2.getText().toString();
         switch (v.getId()){
-            case R.id.Residents:intent=new Intent(this,Residents.class);startActivity(intent);break;
+            case R.id.Residents:intent=new Intent(this,Residents.class);
+                                  intent.putExtra("buildingName",buildingName);startActivity(intent);break;
             case R.id.NoticeBoard:intent=new Intent(this,NoticeBoard.class);startActivity(intent);break;
+            case R.id.accept_guest:intent=new Intent(this,AcceptGuest.class);
+                                    intent.putExtra("name",name);
+                                    startActivity(intent);break;
             default:break;
         }
     }

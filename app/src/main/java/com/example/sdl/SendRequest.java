@@ -24,6 +24,7 @@ public class SendRequest extends AppCompatActivity {
         b1=findViewById(R.id.sendRequestBtn);
         Intent intent=getIntent();
         final String owner=intent.getStringExtra("owner");
+        final String buildingName=intent.getStringExtra("buildingName");
         final String flatno=intent.getStringExtra("flatno");
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +36,7 @@ public class SendRequest extends AppCompatActivity {
                 reference=rootNode.getReference();
                 String guest=t1.getEditText().getText().toString().trim();
                 RequestHelperClass requestHelperClass=new RequestHelperClass(owner,guest,"Pending");
-                reference.child("requests").child(owner).setValue(requestHelperClass);
+                reference.child("requests").child(guest).setValue(requestHelperClass);
 
             }
         });

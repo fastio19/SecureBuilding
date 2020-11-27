@@ -12,7 +12,6 @@
         android:layout_height="200dp"
         android:background="#fece2f"
         android:padding="20dp">
-
         <ImageView
             android:id="@+id/profile_image"
             android:layout_width="100dp"
@@ -135,6 +134,7 @@
         android:orientation="horizontal">
         <androidx.cardview.widget.CardView
             android:layout_width="160dp"
+            android:id="@+id/accept_guest"
             android:layout_height="130dp"
             android:layout_weight="1"
             app:cardCornerRadius="8dp"
@@ -148,7 +148,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Residents"
+                    android:text="Accept/Decline"
                     android:layout_centerHorizontal="true"
                     android:textSize="18dp"
                     android:textStyle="bold" />
@@ -158,7 +158,7 @@
                     android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/residents"/>
+                    android:src="@drawable/online"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -169,20 +169,17 @@
             android:layout_weight="1"
             app:cardCornerRadius="8dp"
             app:cardElevation="2dp">
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="8dp">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Notice Board"
+                    android:text="Dummy"
                     android:layout_centerHorizontal="true"
                     android:textSize="18dp"
                     android:textStyle="bold" />
-
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
@@ -192,7 +189,4 @@
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
-
-
-
 </LinearLayout>

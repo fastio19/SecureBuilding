@@ -13,7 +13,7 @@
         android:layout_width="156dp"
         android:layout_height="117dp"
         android:src="@drawable/mygate"
-        android:transitionName="logo_image" />
+        android:transitionName="logo_image"/>
     <TextView
         android:id="@+id/textview1"
         android:layout_width="wrap_content"
