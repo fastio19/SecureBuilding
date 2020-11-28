@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DatabaseReference;
@@ -37,7 +38,7 @@ public class SendRequest extends AppCompatActivity {
                 String guest=t1.getEditText().getText().toString().trim();
                 RequestHelperClass requestHelperClass=new RequestHelperClass(owner,guest,"Pending");
                 reference.child("requests").child(guest).setValue(requestHelperClass);
-
+                Toast.makeText(SendRequest.this,"Request sent successfully!!",Toast.LENGTH_SHORT).show();
             }
         });
     }
