@@ -1,7 +1,9 @@
 package com.example.sdl;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,7 @@ import java.util.ArrayList;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     Context context;
     ArrayList<UserHelperClass> profiles;
+    String guest;
     public MyAdapter(Context c, ArrayList<UserHelperClass> p){
         context=c;
         profiles=p;
@@ -58,11 +61,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 public void onClick(View v) {
                     String owner=name.getText().toString();
                     String Flatno=flatno.getText().toString();
-                    Toast.makeText(context,"Request is clicked",Toast.LENGTH_SHORT).show();
+
                     Intent intent=new Intent(context,SendRequest.class);
                     intent.putExtra("owner",owner);
                     intent.putExtra("flatno",Flatno);
                     context.startActivity(intent);
+                    request.setText("Pending");
+                    request.setEnabled(false);
                 }
             });
         }

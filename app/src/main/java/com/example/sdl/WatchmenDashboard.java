@@ -27,14 +27,13 @@ public class WatchmenDashboard extends AppCompatActivity implements View.OnClick
         parkingProblem.setOnClickListener(this);
         guestApproval.setOnClickListener(this);
     }
-
     @Override
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()){
             case R.id.ParkingProblem:intent=new Intent(this,ParkingProblem.class);
                                         startActivity(intent);break;
-            case R.id.guest_approval:intent=new Intent(this,GuestApproval.class);
+            case R.id.guest_approval:intent=new Intent(this,WatchmenEntryApproval.class);
                                         intent.putExtra("buildingName",BuildingName);
                                         startActivity(intent);break;
             default:break;

@@ -19,7 +19,8 @@ import android.widget.TextView;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener{
     TextView t1,t2,t3,t4;
-    private CardView residents,noticeBoard,acceptGuest;
+    private CardView residents,noticeBoard,acceptGuest,emergency;
+    Button b1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         t2=findViewById(R.id.building_name);
         t3=findViewById(R.id.flat_no);
         t4=findViewById(R.id.phone_no);
+        b1=findViewById(R.id.RequestCallbackBtn);
         final Intent intent=getIntent();
         String Name=intent.getStringExtra("name");
         String BuildingName=intent.getStringExtra("building_name");
@@ -42,9 +44,28 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         residents=(CardView)findViewById(R.id.Residents);
         noticeBoard=(CardView)findViewById(R.id.NoticeBoard);
         acceptGuest=(CardView)findViewById(R.id.accept_guest);
+        emergency=(CardView)findViewById(R.id.Emergency);
         residents.setOnClickListener(this);
         noticeBoard.setOnClickListener(this);
         acceptGuest.setOnClickListener(this);
+        emergency.setOnClickListener(this);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               AlertDialog.Builder dialog=new AlertDialog.Builder(Dashboard.this);
+               dialog.setMessage("Our team will call you");
+               dialog.setTitle("Thank You");
+               dialog.setPositiveButton("Ok",
+                       new DialogInterface.OnClickListener() {
+                           @Override
+                           public void onClick(DialogInterface dialog, int which) {
+
+                           }
+               });
+               AlertDialog alertDialog=dialog.create();
+               alertDialog.show();
+            }
+        });
     }
 
     @Override
@@ -59,6 +80,9 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
             case R.id.accept_guest:intent=new Intent(this,AcceptGuest.class);
                                     intent.putExtra("name",name);
                                     startActivity(intent);break;
+            case R.id.Emergency:intent=new Intent(this,Emergency.class);
+                                startActivity(intent);
+                                break;
             default:break;
         }
     }

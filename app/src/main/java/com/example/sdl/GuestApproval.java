@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -44,7 +45,6 @@ public class GuestApproval extends AppCompatActivity {
                 adapter=new MyAdapter(GuestApproval.this,list);
                 recyclerView.setAdapter(adapter);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(getApplicationContext(),"Oops something is wrong!!!",Toast.LENGTH_SHORT).show();

@@ -39,6 +39,8 @@ public class SendRequest extends AppCompatActivity {
                 RequestHelperClass requestHelperClass=new RequestHelperClass(owner,guest,"Pending");
                 reference.child("requests").child(guest).setValue(requestHelperClass);
                 Toast.makeText(SendRequest.this,"Request sent successfully!!",Toast.LENGTH_SHORT).show();
+                b1.setEnabled(false);
+                b1.setText("Pending");
             }
         });
     }

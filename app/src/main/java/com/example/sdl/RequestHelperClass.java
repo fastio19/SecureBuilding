@@ -1,7 +1,7 @@
 package com.example.sdl;
 
 public class RequestHelperClass {
-    String owner,guest,status;
+    String owner,guest,status,buildingName;
 
     public RequestHelperClass(){
 
@@ -11,6 +11,7 @@ public class RequestHelperClass {
         this.guest = guest;
         this.status=status;
     }
+
 
     public String getOwner() {
         return owner;

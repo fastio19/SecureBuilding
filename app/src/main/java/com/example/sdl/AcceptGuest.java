@@ -36,7 +36,7 @@ public class AcceptGuest extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot ds:snapshot.getChildren()){
-                    if(ds.child("owner").getValue().equals(owner)){
+                    if(ds.child("owner").getValue().equals(owner) && ds.child("status").getValue().equals("Pending")){
                         RequestHelperClass p=ds.getValue(RequestHelperClass.class);
                         list.add(p);
                     }
