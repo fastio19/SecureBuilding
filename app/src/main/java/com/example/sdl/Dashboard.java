@@ -76,7 +76,9 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         switch (v.getId()){
             case R.id.Residents:intent=new Intent(this,Residents.class);
                                   intent.putExtra("buildingName",buildingName);startActivity(intent);break;
-            case R.id.NoticeBoard:intent=new Intent(this,NoticeBoard.class);startActivity(intent);break;
+            case R.id.NoticeBoard:intent=new Intent(this,NoticeBoard.class);
+                                    intent.putExtra("buildingName",buildingName);
+                                    startActivity(intent);break;
             case R.id.accept_guest:intent=new Intent(this,AcceptGuest.class);
                                     intent.putExtra("name",name);
                                     startActivity(intent);break;

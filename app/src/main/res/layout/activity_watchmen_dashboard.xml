@@ -173,6 +173,32 @@
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/community"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_centerHorizontal="true"
+            android:text="Is your community using SecureBuilding?No request a callback for more information."
+
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/WatchmenRequestCallbackBtn"
+            android:layout_below="@+id/community"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/custom_button"
+            android:text="Request callback"
+            android:textColor="@color/colorPrimaryDark"
+            android:elevation="10dp" />
+    </RelativeLayout>
 
 
 

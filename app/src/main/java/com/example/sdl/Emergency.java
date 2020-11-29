@@ -20,11 +20,11 @@ import android.widget.Toast;
 
 public class Emergency extends AppCompatActivity {
     ListView mListView;
-    int[] images = {R.drawable.ambulance,
-            R.drawable.policeman,
-            R.drawable.fire_truck,
-            R.drawable.phone_call};
-    String[] Names = {"1234567890", "2325212457", "3421457724", "1241789211"};
+    int[] images = {R.drawable.hello,
+            R.drawable.newpolice,
+            R.drawable.firefighter,
+            R.drawable.natural_disaster,R.drawable.pipeline};
+    String[] Names = {"1234567890", "2325212457", "3421457724", "1241789211","4528284029"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

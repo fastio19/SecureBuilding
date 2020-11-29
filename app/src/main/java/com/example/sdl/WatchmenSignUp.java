@@ -89,7 +89,6 @@ public class WatchmenSignUp extends AppCompatActivity {
             return true;
         }
     }
-
     private boolean validateName() {
         String val=name.getEditText().getText().toString();
         if(val.isEmpty()){
