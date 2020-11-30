@@ -74,7 +74,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         String name=t1.getText().toString();
         String buildingName=t2.getText().toString();
         switch (v.getId()){
-            case R.id.Residents:intent=new Intent(this,Residents.class);
+            case R.id.Residents:intent=new Intent(this,NewResidents.class);
                                   intent.putExtra("buildingName",buildingName);startActivity(intent);break;
             case R.id.NoticeBoard:intent=new Intent(this,NoticeBoard.class);
                                     intent.putExtra("buildingName",buildingName);

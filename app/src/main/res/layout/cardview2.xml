@@ -2,48 +2,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_margin="20dp"
-    android:weightSum="2">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:text="GuestName :"
-            android:id="@+id/cardview2_names"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="GuestName :"
+                android:id="@+id/cardview2_names"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"/>
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/cardview2_names"
                 android:id="@+id/AcceptBtn"
-                android:text="Accept"
+                android:text="Yes"
+                android:textSize="10sp"
+                android:layout_toEndOf="@+id/cardview2_names"
                 android:textColor="@color/colorPrimaryDark"
                 android:visibility="visible"/>
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="72dp"
+                android:layout_height="40dp"
+                android:textSize="10sp"
                 android:layout_toRightOf="@+id/AcceptBtn"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/DeclineBtn"
-                android:text="Decline"
+                android:text="No"
                 android:textColor="@color/colorPrimaryDark"
                 android:visibility="visible"/>
         </RelativeLayout>
 
-    </LinearLayout>
 </LinearLayout>

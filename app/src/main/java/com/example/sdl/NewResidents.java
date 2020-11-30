@@ -16,38 +16,39 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class NoticeBoard extends AppCompatActivity {
+public class NewResidents extends AppCompatActivity {
     RecyclerView recyclerView;
-    NewsAdapter newsAdapter;
+    ResidentsAdapter residentsAdapter;
     DatabaseReference reference;
-    ArrayList<NewsHelperClass> list;
+    ArrayList<UserHelperClass> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notice_board);
-        recyclerView=(RecyclerView)findViewById(R.id.NoticeBoardRecyclerView);
+        setContentView(R.layout.activity_new_residents);
+        recyclerView=(RecyclerView)findViewById(R.id.ResidentsRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        list=new ArrayList<NewsHelperClass>();
+        list=new ArrayList<UserHelperClass>();
         final Intent intent=getIntent();
         final String BuildingName=intent.getStringExtra("buildingName");
-        reference= FirebaseDatabase.getInstance().getReference().child("noticeboard").child(BuildingName);
+        reference= FirebaseDatabase.getInstance().getReference().child("users");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot ds:snapshot.getChildren()){
-                        NewsHelperClass p=ds.getValue(NewsHelperClass.class);
+                    if(ds.child("buildingName").getValue().equals(BuildingName)){
+                        UserHelperClass p=ds.getValue(UserHelperClass.class);
                         list.add(p);
+                    }
                 }
-                newsAdapter=new NewsAdapter(NoticeBoard.this,list);
-                recyclerView.setAdapter(newsAdapter);
+                residentsAdapter=new ResidentsAdapter(NewResidents.this,list);
+                recyclerView.setAdapter(residentsAdapter);
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(getApplicationContext(),"Oops something is wrong!!!",Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }
