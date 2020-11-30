@@ -54,7 +54,7 @@ public class AdditionDetails extends AppCompatActivity {
                 String flat_no=flatNo.getEditText().getText().toString().trim();
                 String vehicle_no=vehicleNo.getEditText().getText().toString().trim();
                 UserHelperClass helperClass=new UserHelperClass(name,username,email,phoneNo,password,
-                        building_name,flat_no,vehicle_no);
+                        building_name,flat_no,vehicle_no,"No");
                 reference.child(username).setValue(helperClass);
                 Toast.makeText(AdditionDetails.this,"Registered Successfully !!",
                         Toast.LENGTH_LONG).show();

@@ -8,7 +8,20 @@
     tools:context=".NoticeBoard">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
         android:id="@+id/NoticeBoardRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="500dp"/>
+    <Button
+        android:id="@+id/SendNotice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NoticeBoardRecyclerView"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/custom_button"
+        android:text="Send Notice"
+        android:textColor="@color/colorPrimaryDark"
+        android:elevation="10dp" />
 </RelativeLayout>

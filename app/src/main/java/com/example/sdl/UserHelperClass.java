@@ -9,13 +9,23 @@ public class UserHelperClass {
     String buildingName;
     String flatNo;
     String vehicleNo;
+    String secretary;
     public UserHelperClass(){
     }
     public UserHelperClass(String name){
         this.name=name;
     }
+
+    public String getSecretary() {
+        return secretary;
+    }
+
+    public void setSecretary(String secretary) {
+        this.secretary = secretary;
+    }
+
     public UserHelperClass(String name, String username, String email, String phoneNo, String password,
-                           String buildingName,String flatNo,String vehicleNo) {
+                           String buildingName, String flatNo, String vehicleNo, String secretary) {
         this.name = name;
         this.username = username;
         this.email = email;
@@ -24,6 +34,7 @@ public class UserHelperClass {
         this.buildingName=buildingName;
         this.flatNo=flatNo;
         this.vehicleNo=vehicleNo;
+        this.secretary=secretary;
     }
     public String getFlatNo() {
         return flatNo;
