@@ -4,7 +4,7 @@ without the need for them to enter the premises of building .It allows to read a
 building. It allows watchmen to send alert to owner if his vehicle is not alligned properly.
 
 
-<table>
+<table align="center">
   <tr>
     <td>Splash Screen</td>
      <td>Login Page</td>
