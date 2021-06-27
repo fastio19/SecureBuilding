@@ -6,9 +6,9 @@ building. It allows watchmen to send alert to owner if his vehicle is not allign
 
 <table align="center">
   <tr>
-    <td>Splash Screen</td>
-     <td>Login Page</td>
-     <td>Dashboard</td>
+    <th>Splash Screen</th>
+     <th>Login Page</th>
+     <th>Dashboard</th>
   </tr>
   <tr>
     <td><img src="Screenshots/Screenshot_2020-12-05-09-59-47-639_com.example.sdl.jpg" width=270 height=480></td>
@@ -17,9 +17,9 @@ building. It allows watchmen to send alert to owner if his vehicle is not allign
   </tr>
   
   <tr>
-    <td>Residents</td>
-     <td>Notice Board</td>
-     <td>Sent Notice</td>
+    <th>Residents</th>
+     <th>Notice Board</th>
+     <th>Sent Notice</th>
   </tr>
   <tr>
     <td><img src="Screenshots/Screenshot_2020-12-05-10-00-29-212_com.example.sdl.jpg" width=270 height=480></td>
@@ -27,9 +27,9 @@ building. It allows watchmen to send alert to owner if his vehicle is not allign
     <td><img src="Screenshots/Screenshot_2020-12-05-10-00-41-928_com.example.sdl.jpg" width=270 height=480></td>
   </tr>
   <tr>
-    <td>Emergency Contacts</td>
-     <td>Watchmen Login</td>
-     <td>Watchmen Dashboard</td>
+    <th>Emergency Contacts</th>
+     <th>Watchmen Login</th>
+     <th>Watchmen Dashboard</th>
   </tr>
   <tr>
     <td><img src="Screenshots/Screenshot_2020-12-05-10-00-46-905_com.example.sdl.jpg" width=270 height=480></td>
@@ -37,7 +37,7 @@ building. It allows watchmen to send alert to owner if his vehicle is not allign
     <td><img src="Screenshots/Screenshot_2020-12-05-10-28-46-520_com.example.sdl.jpg" width=270 height=480></td>
   </tr>
    <tr>
-    <td>Parking Problem</td>
+    <th>Parking Problem</th>
   </tr>
   <tr>
     <td><img src="Screenshots/Screenshot_20201210-112518.png" width=270 height=480></td>
