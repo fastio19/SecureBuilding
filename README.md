@@ -3,6 +3,10 @@ It is an residential building management android app which facilitate residents 
 without the need for them to enter the premises of building .It allows to read all the notices send by the secretary of
 building. It allows watchmen to send alert to owner if his vehicle is not alligned properly.
 
+![Hnet-image](https://github.com/fastio19/SecureBuilding/blob/master/Preview.gif)
+
+
+
 
 <table align="center">
   <tr>
