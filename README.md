@@ -3,11 +3,11 @@ It is an residential building management android app which facilitate residents 
 without the need for them to enter the premises of building .It allows to read all the notices send by the secretary of
 building. It allows watchmen to send alert to owner if his vehicle is not alligned properly.
 
-![Hnet-image](https://github.com/fastio19/SecureBuilding/blob/master/Preview.gif)
+<p align="center">
+  <img src="https://github.com/fastio19/SecureBuilding/blob/master/Preview.gif" width="250" height="500">
+</p>
 
-
-
-
+<!---
 <table align="center">
   <tr>
     <th>Splash Screen</th>
@@ -53,3 +53,4 @@ building. It allows watchmen to send alert to owner if his vehicle is not allign
     <td><img src="Screenshots/Status.jpg" width=270 height=480></td>
   </tr>
  </table>
+--->
